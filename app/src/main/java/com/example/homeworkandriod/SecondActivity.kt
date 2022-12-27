@@ -10,8 +10,8 @@ class SecondActivity : AppCompatActivity() {
         setContentView(R.layout.second_activity)
     }
 
-    override fun onBackPressed() {
-        super.onBackPressed()
+    override fun onStop() {
+        super.onStop()
         val intent = Intent(this, MainActivity::class.java)
         intent.putExtra("Message", "Happy new year")
         startActivity(intent)
